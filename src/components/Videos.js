@@ -1,0 +1,18 @@
+import React from 'react'
+// import CarouselItem from 'react-bootstrap/esm/CarouselItem'
+import VideoCard from "./VideoCard.js"
+import "../styles/Videos.css"
+
+const Videos = ({videos}) => {
+    return (
+        <div className="videos">
+        {
+            videos.map((item,index)=>(
+                <VideoCard index={index} key={index} image={item.image} name = {item.name}/>
+            ))
+        }
+    </div>
+  )
+}
+
+export default Videos
